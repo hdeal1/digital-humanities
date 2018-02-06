@@ -1,4 +1,4 @@
-var conn	= require('../config/database.js').connection;
+var conn	= require('./database_ops').connection;
 var db_error	= "There was a fatal database error.";
 
 module.exports = {

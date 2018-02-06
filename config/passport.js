@@ -1,7 +1,7 @@
 var LocalStrategy	= require('passport-local').Strategy;
 
 var bcrypt		= require('bcrypt-nodejs');
-var connection		= require('../config/database.js').connection;
+var connection		= require('../app/database_ops.js').connection;
 
 module.exports = function(passport) {
 
@@ -22,7 +22,7 @@ module.exports = function(passport) {
 			passReqToCallback : true
 		},
 		function(req, username, password, done) {
-			connection.query("SELECT * FROM user WHERE username = ?", [username], function(err, rows) {
+			connection.query("SELECT * FROM user WHERE username = ?",[username], function(err, rows) {
 				if(err)
 					return done(err);
 				else if (!rows.length)

@@ -25,7 +25,7 @@ CREATE TABLE digital_humanities.user_meta (
 
 CREATE TABLE digital_humanities.membership (
 	`uid` INT UNSIGNED NOT NULL,
-	`role` TINYINT(1),
+	`role` VARCHAR(5),
 	PRIMARY KEY (`uid`),
 	FOREIGN KEY (`uid`) REFERENCES user(`uid`)
 );
@@ -52,15 +52,3 @@ CREATE TABLE digital_humanities.data_meta (
 	FOREIGN KEY (`uid`) REFERENCES user(`uid`),
 	FOREIGN KEY (`data_id`) REFERENCES data(`data_id`)
 );
-
-
-
-
-
-
-
-
-
-
-
-
