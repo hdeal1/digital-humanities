@@ -1,5 +1,4 @@
 # digital-humanities
-Digital Humanities
 
 Preface: 
 
