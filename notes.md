@@ -68,7 +68,7 @@ Render: Script load call from external directory of “render-scripts”. Select
 
 ## Ideal Product Rollout
 
-### =User= 
+### User 
 	→ Functional (student):  Login/Logout integration with 1st tier privileges. Password reset/change. User settings page. Ability to add new projects and collections (with some exceptions – needs further discussion). Ability to edit datasets they are granted access to by the set owner (google drive sharing type thing). Requesting access to a set. User personal page to track followed collections and edit projects they’ve created. Search history for collections and recent datasets. Ability to follow users and notifications on new projects/collection when their followed user add new ones. Ability to edit their own data entries sorted by project by collection. Ability to see all data entries they’ve run by project by collection. For datasets from a different moderator, student can suggest an addition to be reviewed by the moderator of that set or can request access to edit (cross school collab).  Cannot add plugins that the moderator did not authorize? Upload files to be rendered with the data (picture or other relevant graphics/data). Download datasets as a .csv Download the rendered graph/map as an image. Create blog posts or papers in projects on the personal user page (prevents our application from being only mapping capable). 
 
 	→ Stylistic (student):
@@ -86,7 +86,7 @@ Render: Script load call from external directory of “render-scripts”. Select
 
 
 
-## =System=
+## System
 	→Middleware: isStudent, isTeacher, isAdmin, isLegitUpload, isMember (of a school collection), isPermissionsOk (r, w, r+w), isOwner (project/collection), isPrivate (project/collection), isMalformed (data entry sanitation check), isLoggedIn, isPluginEnabled, isDataSetLegit (to ensure only user entered data sets are run, if someone gets a bad .csv file on the sys we can avoid it), isMyPage (when user/mod indexes their private pages, checks if it’s actually theirs), isBanned
 
 	
@@ -165,5 +165,5 @@ isLoggedIn, isPermissionsOk, isMember
 → Johnny want to do this part? I know you’re the server and routing guy. 
 
 
-## =Render=
+## Render
 → Let me (Henry) do this part. I have ideas about how rendering will work but I need to let all my thoughts brew. 
