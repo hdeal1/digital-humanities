@@ -148,9 +148,11 @@ These aren't in the build yet because we don't have any scripts to serve.
 
 CREATE TABLE digital_humanities.render_scripts (
 	`rscript_id`INT UNSIGNED NOT NULL AUTO_INCREMENT,
+	`data_type_id`INT UNSIGNED NOT NULL,
 	`name` VARCHAR(30) NOT NULL,
 	`filepath` VARCHAR(50) NOT NULL,
-	PRIMARY KEY (`rscript_id`)
+		PRIMARY KEY (`rscript_id`),
+	FOREIGN KEY (`data_type_id`) REFERENCES data_type(`data_type_id`)
 );
 
 To Do:
