@@ -13,14 +13,14 @@ CREATE TABLE digital_humanities.user (
 );
 
 CREATE TABLE digital_humanities.user_meta (
-	`s_uid` INT UNSIGNED NOT NULL,
+	`uid` INT UNSIGNED NOT NULL,
 	`first_name` VARCHAR(20) NOT NULL,
 	`last_name` VARCHAR(20) NOT NULL,
 	`email` VARCHAR(30) NOT NULL,
 	`school_link` TINYINT(1) NOT NULL,
 	`school_name` VARCHAR(35),
 	`icon` BLOB NOT NULL,
-		PRIMARY KEY (`s_uid`),
+		PRIMARY KEY (`uid`),
 	FOREIGN KEY (`uid`) REFERENCES user(`uid`)
 );
 
