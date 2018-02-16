@@ -37,22 +37,22 @@ CREATE TABLE digital_humanities.render_type_scaler (
 	`render_type_scaler` INT UNSIGNED NOT NULL AUTO_INCREMENT,
 	`name` VARCHAR(255) NOT NULL,
 	PRIMARY KEY (`render_type_scaler`)
-);
+); /*Tells scripts how to scale*/
 
 CREATE TABLE digital_humanities.render_type_draw (
 	`render_type_draw_id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
 	`name` VARCHAR(255) NOT NULL,
 	PRIMARY KEY (`render_type_draw_id`)
-);
+); /*Point-To-Point, heatmap. The kind of drawing were looking for from the data_type*/
 
 CREATE TABLE digital_humanities.data_type (
 	`data_type_id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
-	`render_type_draw_id`INT UNSIGNED NOT NULL,
+	`render_type_draw_id `INT UNSIGNED NOT NULL,
 	`name` VARCHAR(255) NOT NULL,
 	`desc` VARCHAR(255) NOT NULL,
 		PRIMARY KEY (`data_type_id`),
 	FOREIGN KEY (`render_type_draw_id`) REFERENCES render_type_draw(`render_type_id`)
-);
+); /*location, chart. What kind of data it is*/
 
 CREATE TABLE digital_humanities.project_global (
 	`proj_id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
@@ -158,7 +158,10 @@ CREATE TABLE digital_humanities.render_scripts (
 To Do:
 - Add a class table to sort people by school affiliation so we can see who exactly is from what school (?)
 - Make an assignment table where teachers can make assignments for students in their class (?)
-- 
+- Add tags to project_meta for search filtering
+- Write a query that generates a new table based off the project_global tables and have THAT proj_id be indexed instead of the project storage table -- I think
+- Figure out how the fuck project tables work
+- Find Tupac
 */
 
 
