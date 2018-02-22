@@ -9,7 +9,7 @@ CREATE TABLE digital_humanities.user (
 	`uid` INT UNSIGNED NOT NULL AUTO_INCREMENT,
 	`username` VARCHAR(25) NOT NULL,
 	`password` VARCHAR(25) NOT NULL,
-	PRIMARY KEY (`s_uid`)
+	PRIMARY KEY (`uid`)
 );
 
 CREATE TABLE digital_humanities.user_meta (
